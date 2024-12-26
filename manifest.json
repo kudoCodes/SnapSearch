@@ -1,0 +1,23 @@
+{
+	"manifest_version": 3,
+	"name": "SnapSearch",
+	"version": "1.0",
+	"description": "When the users highlights a string of text, SnapSearch will query search results on that topic and provide the user with a summary on that information. All while staying within the original webpage.",
+	
+	"icons": {
+      "48": "icons/border-48.png"
+	},
+
+	"permissions": [
+      "activeTab",
+      "webRequest",
+      "webRequestBlocking"
+  	],
+
+	"content_scripts": [
+    {
+      "matches": ["*://*/"],
+      "js": ["snapSearch.js"]
+    }
+  ]
+}
